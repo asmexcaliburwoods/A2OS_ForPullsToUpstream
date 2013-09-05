@@ -910,6 +910,7 @@ TYPE
 			ELSE
 				Identifier(x.name)
 			END;
+
 			IF SyntaxTree.PublicWrite IN x.access THEN w.String( "*" )
 			ELSIF SyntaxTree.PublicRead IN x.access THEN w.String( "-" )
 			ELSIF x.access = {} THEN ASSERT(mode > SourceCode);
